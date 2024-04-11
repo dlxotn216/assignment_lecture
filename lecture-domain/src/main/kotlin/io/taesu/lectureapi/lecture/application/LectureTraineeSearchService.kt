@@ -6,6 +6,7 @@ import io.taesu.lectureapi.lecture.domain.LectureTraineeSearchRepository
 import io.taesu.lectureapi.lecture.infra.dtos.LectureTraineeRow
 import io.taesu.lectureapi.lecture.infra.dtos.LectureTraineeSearchCriteria
 import io.taesu.lectureapi.lecture.infra.dtos.LectureTraineeSpecification
+import org.springframework.data.domain.Slice
 import org.springframework.data.domain.SliceImpl
 import org.springframework.stereotype.Service
 
@@ -24,7 +25,7 @@ class LectureTraineeSearchService(
             .run(Companion::from)
     }
 
-    fun searchAsSlice(criteria: LectureTraineeSearchCriteria): SliceImpl<LectureTraineeRow> {
+    fun searchAsSlice(criteria: LectureTraineeSearchCriteria): Slice<LectureTraineeRow> {
         val slice = lectureTraineeSearchRepository.findAll(
             LectureTraineeSpecification.from(criteria),
             criteria.pageRequest,

@@ -50,7 +50,7 @@ class PopularLectureService(private val stringRedisRepository: StringRedisReposi
         private val KEY_DATE_PATTERN: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyyMMdd")
 
         fun resolvePopularLectureKey(it: LocalDate): String {
-            return "popular-lecture:${it.format(PopularLectureService.KEY_DATE_PATTERN)}"
+            return "popular-lecture:${it.format(KEY_DATE_PATTERN)}"
         }
     }
 }
