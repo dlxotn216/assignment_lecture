@@ -1,3 +1,6 @@
+## Github
+https://github.com/dlxotn216/assignment_lecture/blob/master/README.md
+
 ## 프로젝트 개요
 ### 요구사항
 * 직원들의 경험을 위해 유명 강연자를 초빙한 강연 정보, 강연 신청 등을 관리하는 플랫폼의 Backend API 구현
